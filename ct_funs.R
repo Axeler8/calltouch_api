@@ -3,10 +3,11 @@
 # https://www.calltouch.ru/support/api-metod-vygruzki-zhurnala-zvonkov/
 # https://www.calltouch.ru/support/api-metod-vygruzki-zhurnala-sdelok/
 
-# - функция авторизации
+# функция авторизации (локальная)
 # функции сбора звонков по дню и за период
 # функция сбора сделок
 # функция сбора заявок - в процессе
+
 source("~/R/funs/my_tools.R")
 
 sendLogs_mini("Calltouch API V4 loaded")
@@ -25,10 +26,10 @@ loadTok <- function(tokPath = "~/R/tokens/sys_conf"){
 }
 
 
-loadTokClient <- function(proj = "evo"){
+loadTokClient <- function(proj = "cleintName"){
   require("data.table")
   clientTok <- as.data.table(loadTok())
-  clientTok <- clientTok[proj_name %ilike% "evo"]
+  clientTok <- clientTok[proj_name %ilike% "cleintName"]
   return(clientTok)
 }
 
