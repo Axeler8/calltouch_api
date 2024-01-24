@@ -8,14 +8,11 @@
 # функция сбора сделок
 # функция сбора заявок - в процессе
 
-source("~/R/funs/my_tools.R")
-
-sendLogs_mini("Calltouch API V4 loaded")
-
-sys_conf <- readRDS("~/R/tokens/sys_conf") %>%
-  as.data.table()
-
-sys_conf_ct <- sys_conf[!is.na(ID_ct)]
+# source("~/R/funs/my_tools.R")
+# sendLogs_mini("Calltouch API V4 loaded")
+# sys_conf <- readRDS("~/R/tokens/sys_conf") %>%
+ # as.data.table()
+# sys_conf_ct <- sys_conf[!is.na(ID_ct)]
 
 
 loadTok <- function(tokPath = "~/R/tokens/sys_conf"){
